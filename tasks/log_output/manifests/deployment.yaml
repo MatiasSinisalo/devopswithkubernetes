@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp1-1
+  name: log-output
 spec:
   selector:
     matchLabels:
-      app: myapp1-1
+      app: log-output
   template:
     metadata:
       labels:
-        app: myapp1-1
+        app: log-output
     spec:
       containers:
-      - name: myapp1-1
-        image: myapp1-1:latest
+      - name: log-output
+        image: log-output:latest
         imagePullPolicy: Never
         resources:
           limits:
